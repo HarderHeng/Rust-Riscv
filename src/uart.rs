@@ -1,4 +1,4 @@
-macro_rules! RegRead {
+macro_rules! _RegRead {
     ($reg:expr) => {
         unsafe {
             let ptr = ($reg) as *mut u8;

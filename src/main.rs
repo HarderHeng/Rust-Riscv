@@ -10,7 +10,9 @@ use uart::*;
 pub fn _start_rust() -> !{
     uart_init();
     uart_print("Hello Rust On Riscv of Qemu!");
-    loop{};
+    loop{
+        
+    };
 }
 
 #[panic_handler]
