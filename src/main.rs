@@ -3,9 +3,13 @@
 
 mod entry;
 mod uart;
+mod plic;
+pub mod util;
 
 use core::panic::PanicInfo;
 use uart::*;
+use plic::*;
+
 #[unsafe(no_mangle)]
 pub fn _start_rust() -> !{
     uart_init();
@@ -17,5 +21,6 @@ pub fn _start_rust() -> !{
 
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> !{
+    uart_print("Panic!");
     loop{};
 }
