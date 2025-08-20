@@ -1,0 +1,20 @@
+[package]
+name = "Rust-RiscvTest"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+
+
+[[bin]]
+name = "Rust-RiscvTest"
+test = false
+
+[profile.dev]
+overflow-checks = false
+panic = "abort"
+
+[profile.release]
+overflow-checks = false
+panic = "abort"
