@@ -17,7 +17,7 @@ pub fn uart_init() {
     uart_0_init();
 }
 
-pub fn uart_print(str: &str) {
+pub fn uart_print_str(str: &str) {
     uart_0_print(str);
 }
 
@@ -39,3 +39,4 @@ fn uart_0_print(str: &str) {
     }
     RegWriteU8!(uartbaseaddr + THR, b'\n');
 }
+fn uart_print_digit()
